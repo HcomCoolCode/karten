@@ -1,20 +1,6 @@
-# Cards
+# Karten
 
-**TODO: Add description**
+Your challenge is to implement a card shuffling algorithm (with tests of course). 
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add cards to your list of dependencies in `mix.exs`:
-
-        def deps do
-          [{:cards, "~> 0.0.1"}]
-        end
-
-  2. Ensure cards is started before your application:
-
-        def application do
-          [applications: [:cards]]
-        end
+Run `mix test` to compile and run your tests.
 
