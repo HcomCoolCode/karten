@@ -9,7 +9,7 @@ defmodule Karten.SlothyShuffleTest do
 		assert length(shuffled) == 104
 	end
 
-	test "shuffled deck is not equal th original deck" do
+	test "shuffled deck is not equal to original deck" do
 		deck = Deck.new
 		shuffled = SlothyShuffle.shuffle([deck])
 		refute deck == shuffled
