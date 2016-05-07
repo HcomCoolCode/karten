@@ -8,7 +8,7 @@ For more fun run `iex -S mix` to open the REPL with this project in scope.
 
 We have defined an interface (known as a Behaviour in Elixir) in this file :=> https://github.com/HcomCoolCode/karten/blob/master/lib/shuffler.ex
 
-And provide an example implementation in :=>  https://github.com/HcomCoolCode/karten/blob/master/lib/slothy_shuffle.ex
+And provide a lazy implementation in :=>  https://github.com/HcomCoolCode/karten/blob/master/lib/slothy_shuffle.ex
 
 All you need is
 
@@ -18,7 +18,7 @@ defmodule Namespace.MyModule do
 
   def shuffle(decks) do # the only required method
     	      decks
-	      |> Enum.concat # decks is a List of Lists [[Cards]] and we expect just a List of Cards out
+	      |> Enum.concat # decks is a List of Lists `[[Cards]]` but we return a `[Card]`
   end
 end
 ```
