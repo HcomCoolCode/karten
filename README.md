@@ -8,7 +8,7 @@ For more fun run `iex -S mix` to open the REPL with this project in scope.
 
 We have defined an interface (known as a Behaviour in Elixir) in this file :=> https://github.com/HcomCoolCode/karten/blob/master/lib/shuffler.ex
 
-And provide an example implementation in https://github.com/HcomCoolCode/karten/blob/master/lib/slothy_shuffle.ex
+And provide an example implementation in :=>  https://github.com/HcomCoolCode/karten/blob/master/lib/slothy_shuffle.ex
 
 All you need is
 
