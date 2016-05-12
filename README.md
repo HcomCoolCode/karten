@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/HcomCoolCode/karten.svg?branch=master)](https://travis-ci.org/HcomCoolCode/karten)
 # Karten
 
 Your challenge is to implement a card shuffling algorithm (with tests of course). 
