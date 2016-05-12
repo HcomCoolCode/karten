@@ -12,7 +12,7 @@ And provide a lazy implementation in :=>  https://github.com/HcomCoolCode/karten
 
 All you need is
 
-```
+```elixir
 defmodule Namespace.MyModule do
   @behaviour Karten.Shuffler # says we implement this behaviour 
 
@@ -25,7 +25,7 @@ end
 
 While that is all you need, it wont pass many tests :( for example
 
-```
+```elixir
 	test "shuffled deck is not equal to original deck" do
 	     	   deck = Deck.new
 		   shuffled = Namespace.MyModule.shuffle([deck])
