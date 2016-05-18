@@ -4,7 +4,7 @@ defmodule Karten.BeezShuffle do
 	def shuffle(decks) do
 		decks
 		|> Enum.concat
-		|> cut
+		# |> cut
 	end
 
 	defp cut(deck) do
