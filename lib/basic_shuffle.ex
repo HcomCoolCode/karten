@@ -3,10 +3,17 @@ defmodule Karten.BasicShuffle do
 
 	def shuffle(decks) do
 		decks
+		|> decksShuffle
 		|> Enum.concat
 		|> deckShuffle
 		|> cut
 		|> cut
+	end
+
+	defp decksShuffle(decks) do
+		for deck <- decks do
+			Enum.shuffle deck
+		end
 	end
 
 	defp deckShuffle(deck) do
