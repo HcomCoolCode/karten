@@ -14,4 +14,23 @@ defmodule Karten.SlothyShuffleTest do
 		shuffled = SlothyShuffle.shuffle([deck])
 		refute deck == shuffled
 	end
+
+	test "two shuffles are not equal" do
+		shuffled1 = SlothyShuffle.shuffle([Deck.new])
+		shuffled2 = SlothyShuffle.shuffle([Deck.new])
+		refute shuffled1 == shuffled2
+	end
+	
+	test "no where in a shuffled deck are there 5 cards in a row of the same suit" do
+		shuffledIntoChunks = [Deck.new]
+		|> SlothyShuffle.shuffle()
+		|> Enum.slice(0..20)
+		|> Enum.chunk(5)
+		|> IO.inspect
+		
+		refute Enum.any?(shuffledIntoChunks, fn(cards) ->
+			suit = hd(cards).suit
+			Enum.all?(cards, &(suit == &1.suit))
+			end)
+	end
 end
