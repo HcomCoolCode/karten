@@ -5,19 +5,13 @@ defmodule Karten.BasicShuffle do
 		decks
 		|> decksShuffle
 		|> Enum.concat
-		|> deckShuffle
+		|> Enum.shuffle
 		|> cut
 		|> cut
 	end
 
 	defp decksShuffle(decks) do
-		for deck <- decks do
-			Enum.shuffle deck
-		end
-	end
-
-	defp deckShuffle(deck) do
-		Enum.shuffle deck
+		Enum.map decks, &(Enum.shuffle &1)
 	end
 
 	defp cut(deck) do
