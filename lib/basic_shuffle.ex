@@ -1,10 +1,16 @@
-defmodule Karten.BeezShuffle do
+defmodule Karten.BasicShuffle do
 	@behaviour Karten.Shuffler
 
 	def shuffle(decks) do
 		decks
 		|> Enum.concat
-		# |> cut
+		|> deckShuffle
+		|> cut
+		|> cut
+	end
+
+	defp deckShuffle(deck) do
+		Enum.shuffle deck
 	end
 
 	defp cut(deck) do
