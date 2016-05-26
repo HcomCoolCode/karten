@@ -2,6 +2,7 @@ defmodule Karten.CardClashShuffler do
 	@behaviour Karten.Shuffler
 
 	def shuffle(decks) do
+		:random.seed(:erlang.now())
 		decks
 		|> Enum.concat
 		|> knuth_shuffle
@@ -17,7 +18,6 @@ defmodule Karten.CardClashShuffler do
 	end
 
 	defp knuth_shuffle(remaining, shuffled) do
-		:random.seed(:erlang.now())
 		index = :random.uniform(tuple_size(remaining)) - 1
 		temp = elem(remaining, index)
 		less_remaining = Tuple.delete_at(remaining, index)

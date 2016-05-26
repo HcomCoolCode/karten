@@ -26,7 +26,7 @@ defmodule Karten.SlothyShuffleTest do
 		|> SlothyShuffle.shuffle()
 		|> Enum.slice(0..20)
 		|> Enum.chunk(5)
-		|> IO.inspect
+#		|> IO.inspect
 		
 		refute Enum.any?(shuffledIntoChunks, fn(cards) ->
 			suit = hd(cards).suit

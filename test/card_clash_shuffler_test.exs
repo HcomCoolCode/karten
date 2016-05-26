@@ -24,7 +24,7 @@ defmodule Karten.CardClashShufflerTest do
 	test "no where in a shuffled deck are there 5 cards in a row of the same suit" do
 		shuffledIntoChunks = [Deck.new]
 		|> CardClashShuffler.shuffle()
-#		|> Enum.slice(0..20)
+#		|> Enum.slice(0..40)
 		|> Enum.chunk(5)
 #		|> IO.inspect
 		
